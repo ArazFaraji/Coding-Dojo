@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Wishing App</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Hello {{user.first_name}}! Make a wish!</h1>
+        <a href="/destroy">Logout</a>
+
+    </div>
+    <div id="add_wish_div">
+        <form action="/add_wish" method="post">
+            {% csrf_token %}
+            <label for="wish_item">I wish for:</label>
+            <input type="text" name="wish" id="wish_item">
+
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
+
+            <a href="/wishes"><button type="button">Cancel</button></a>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>

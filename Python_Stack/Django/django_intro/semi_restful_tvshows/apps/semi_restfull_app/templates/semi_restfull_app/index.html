@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TV Shows</title>
+</head>
+<body>
+    <div id="container">
+        <a href="/shows">Go Back</a>
+        <h1>Add a New Show</h1>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/shows/create" method="post">
+            {% csrf_token %}
+            <p>Title</p>
+            <input type="text" name="title" id="">
+            <div id="network">
+                <p>Network</p>
+                <input type="text" name="network" id="">
+            </div>
+            <div id="releaseDate">
+                <p>Release Date</p>
+                <input type="date" name="release_date" id="">
+            </div>
+            <p>Description</p>
+            <textarea name="description"></textarea>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    
+
+    
+</body>
+</html>

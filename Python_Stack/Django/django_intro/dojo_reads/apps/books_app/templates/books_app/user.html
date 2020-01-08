@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="">
+        <a href="">Home</a>
+        <a href="">Add Book and Review</a>
+        <a href="">Logout</a>
+    </div>
+    <div id="user_profile">
+        <h2>User Alias: ((user.username))</h2>
+        <p>Name: (User.name)</p>
+        <p>Email: (User.email)</p>
+        <p>Total Reviews: (user.reviews.all)</p>
+    </div>
+    <div>
+        <p>Posted Reviews on the following books</p>
+        % for review in user.reviews %
+        <p>%user.books.reviews%</p>
+        % endfor %
+    </div>
+    
+</body>
+</html>

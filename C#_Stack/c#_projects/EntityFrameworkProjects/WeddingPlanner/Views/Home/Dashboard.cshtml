@@ -1,0 +1,61 @@
+<div class="row">
+    <H1>Welcome to the Wedding Planner</H1>
+    <a href="/Logout" style="float:right;">Log Out</a>
+</div>
+
+@{
+    bool Attending = false;
+    }
+
+<div class="col-sm-6">
+    <table class="table table-striped">
+        <tr>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guest</th>
+            <th>Action</th>
+        </tr>
+        @foreach(var i in ViewBag.AllWeddings)
+        {
+            <tr>
+                <td><a href="/WeddingInfo/@i.WeddingId">@i.WedderOne & @i.WedderTwo</a></td>
+                <td>@i.Date </td>
+                <td>@i.Attendees.Count</td>
+                <td> 
+                    @{
+                        if(i.Creator.UserId == ViewBag.User.UserId)
+                        {
+                            <a href="delete/@i.WeddingId">Delete</a>
+                        }
+                        else
+                        {
+                            @foreach(var a in i.Attendees)
+                            {
+                                if(a.UserId == ViewBag.User.UserId)
+                                {
+                                    Attending = true;
+                                }
+                            }
+                            if(Attending == true)
+                            {
+                                <a href="/UnRSVP/@i.WeddingId">Un-RSVP</a>
+                                Attending = false;
+                            }
+                            else if(Attending == false)
+                            {
+                                <a href="/RSVP/@i.WeddingId">RSVP</a>
+                            }
+
+                        }
+                    }
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+
+<a href="/NewWedding" class="btn btn-primary">New Wedding</a>

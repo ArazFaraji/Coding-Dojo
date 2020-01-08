@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'the_wall_app/css/style.css' %}"> 
+    
+    <title>The Wall</title>
+</head>
+<body>
+    <div id="top_bar" >
+        <p class="topBarP">CodingDojo Wall ---------Welcome {{user.first_name}} <a href="/destroy">Log Out</a></p>
+    </div>
+    <div id="message_post">
+        <p>Post a message</p>
+        <form action="post_message" method="post">
+            {% csrf_token %}
+            <textarea name="message" id="" cols="80" rows="10"></textarea>
+            <input type="submit" value="Post a message">
+        </form>
+    </div>
+    <div id="message_wall">
+        {% for message in all_messages reversed %}
+        <div id="message_user">
+            <p id="ffirst_p">{{message.users.first_name}} {{message.users.last_name}} {{message.created_at}}</p>
+            <p id="first_p">{{message.message}}</p>
+                {% for comment in message.comments.all %}
+                <div id="comments">
+                    <p>{{comment.users.first_name}} {{comment.users.last_name}} {{comment.created_at}}</p>
+                    <p>{{comment.comment}}</p>
+                </div>
+                {% endfor %}
+            <div id="comment_form">
+                    <form action="add_comment" method="post">
+                        {% csrf_token %}
+                        <textarea name="comment_add" id="" cols="30" rows="10"></textarea>
+                        <input type="hidden" name="message_id" value="{{message.id}}">
+                        <input type="submit" value="Post a comment">
+                    </form>
+            </div>    
+        {% endfor %}
+            
+        </div>
+    </div>
+    
+</body>
+</html> 

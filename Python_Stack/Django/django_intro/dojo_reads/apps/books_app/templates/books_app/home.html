@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="welcome">
+        <p>Welcome, {{user.first_name}} {{user.last_name}}!</p>
+        <a href="/books/add">Add Book and Review</a>
+        <a href="destroy">Logout</a>
+    </div>
+    <div id="recent_reviews">
+        <p>Recent Book Reviews:</p>
+        %for review in reviews reversed %
+        <div>
+            <a href="">(Book Name)</a>
+            ----star rating
+            <p><a href="">(User name)</a> says: (put review here)</p>
+            <p>(Created date of review)</p>
+        </div>
+    </div>
+    <div id="other_books">
+        <p>Other Books with Reviews</p>
+        <div>
+            <ul>
+                %for book in books%
+                <li><a href="">(Book. title)</a></li>
+                % endfor %
+            </ul>
+            
+
+        </div>
+    </div>
+</body>
+</html>

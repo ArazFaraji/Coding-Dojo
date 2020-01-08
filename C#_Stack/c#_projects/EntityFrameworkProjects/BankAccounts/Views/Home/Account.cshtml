@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Account";
+}
+
+<div class="row">
+    <div class="col-sm-6">
+        <h1>Welcome, Username</h1>
+    </div>
+    <div class="col-sm-6">
+        <p>Current balance : $</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <form action="" method="post">
+            <div class="form-group">
+                <span asp-validation-for="Amount"></span>
+                <label asp-for="Amount"></label>
+                <input asp-for="Amount" class="form-control">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<div class="col-sm-6">
+    <table class="table table-striped">
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        foreach(var l in ViewBag.AllDishes)
+        {
+            <tr>
+                <td>l.Name </td>
+                <td>l.Date </td>
+
+            </tr>
+        }
+    </table>
+</div>

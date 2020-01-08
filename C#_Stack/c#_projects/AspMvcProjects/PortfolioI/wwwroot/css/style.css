@@ -1,0 +1,42 @@
+#wrapper
+{
+    width: 1fr;
+    min-height: 20%;
+    background: lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 50px 50px 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "header header"
+        "title title"
+        "left right"
+}
+#header
+{
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+}
+
+#title
+{
+    grid-area: title;
+    justify-self:center;
+}
+#left_side
+{
+    grid-area: left;
+    justify-self: center;
+    padding: 1.5em;
+}
+#left_side img
+{
+    max-width: 75%;
+}
+#right_side
+{
+    grid-area: right;
+    justify-self: center;
+    padding: 1.5em;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Great Number Game</title>
+</head>
+<body>
+
+    <h1>Welcome to the Great Number Game!</h1>
+    <h3>I am thinking of a number between 1 and 100</h3>
+    <h3>Take a guess!</h3>
+
+    {% if result == "" %}
+    <form action='/guess' method='post'>
+        <input type="number" name="user_guess">
+        <input type="submit" value="Guess">
+    </form>
+    {% endif %}
+
+    {% if result == "Too High." or result == "Too Low." %}
+    <div style="background-color: red;">
+        <p>{{result}}</p>
+    </div>
+    <form action='/guess' method='post'>
+        <input type="number" name="user_guess">
+        <input type="submit" value="Guess">
+    </form>
+
+    {% elif result == "Correct!" %}
+    <div style="background-color: green;">
+        <p>{{result}}</p>
+        <a href="/playAgain"><button>Play Again</button></a>
+    </div>
+
+    {% endif %}
+    
+    
+    
+    
+</body>
+</html>

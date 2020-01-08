@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+
+
+<div class="container">
+    <h1>Register to this Cool Site!</h1> <a href="/Login">Login</a>
+    <form action="RegisterNewUser" method="post">
+        <div class="form-group">
+            <span asp-validation-for="FirstName"></span>
+            <label for="FirstName"></label>
+            <input asp-for="FirstName">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="LastName"></span>
+            <label for="LastName"></label>
+            <input asp-for="LastName">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Email"></span>
+            <label for="Email"></label>
+            <input asp-for="Email">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Password"></span>
+            <label for="Password"></label>
+            <input asp-for="Password">
+        </div>
+
+        <div class="form-group">
+            <span asp-validation-for="Confirm"></span>
+            <label for="Confirm"></label>
+            <input asp-for="Confirm">
+        </div>
+    </form>
+
+</div>

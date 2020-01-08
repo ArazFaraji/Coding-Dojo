@@ -1,0 +1,36 @@
+#wrapper
+{
+    width: 1fr;
+    min-height: 40%;
+    background: lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 50px 50px 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "header header"
+    "middle middle"
+    "bottom bottom "
+}
+#header
+{
+    grid-area: header;
+}
+#middle
+{
+    grid-area: middle;
+}
+#bottom
+{
+    grid-area: bottom;
+}
+/* #left_side
+{
+    grid-area: left;
+}
+#right_side
+{
+    grid-area: right;
+} */

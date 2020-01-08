@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Plan</title>
+</head>
+<body>
+    <div id="header">
+        <a href="/">Home</a>
+        <a href="/destroy">Logout</a>
+    </div>
+    <div id="add_travel_div">
+        <form action="add_trip" method="post">
+            <label for="destination">Destination</label>
+            <input type="text" name="destination" id="destination">
+
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
+
+            <label for="travel_date_start">Travel Date From</label>
+            <input type="date" name="travel_date_start" id="travel_date_start">
+
+            <label for="travel_date_end">Travel Date To</label>
+            <input type="text" name="travel_date_end" id="travel_date_end">
+
+            <input type="submit" value="Add">
+        </form>
+
+    </div>
+    
+</body>
+</html>

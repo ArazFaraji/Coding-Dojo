@@ -1,0 +1,42 @@
+.d1{
+    background: lightskyblue
+}
+.d2{
+    background: lightsalmon;
+    grid-area: header;
+}
+.d3{
+    background: paleturquoise;
+    align-self: end;    /* This allows for content to be aligned horizontally */
+}
+.d4{
+    background: lightpink;
+    justify-self: center;     /* This moves the content inside of the grid cell. Can also use 'start' or 'end' for left or right of the grid cell.    */
+}
+.d5{
+    background: palegreen;
+    grid-column: 2/4;
+}
+.d6{
+    background: rebeccapurple;
+    grid-row: 2/4;
+}
+
+#container{
+    font-size: 40px;
+    width: 100%;
+    min-height: 300px;
+    background: lightgray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    /* Takes in 2 arguments. 1st is how many repitions, 2nd is what you want repeated, can have multiple values to be repeated. */
+    grid-template-rows: repeat(3, minmax(90px, 1fr));  /* Sets minimum and max sizes for each cell */
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    /* grid-gap: 10px 15px;        Can be used instead of previous two selectors. 1st value is rows, 2nd value is columns. */
+    /* justify-items: center;    Updates each cell in the grid with this alignment value. Can be used if you dont need individual alignment per grid cell. */
+    /* align-items: end;          Updates alignment for every cell horizontally, */
+    grid-template-areas:        
+        "header header header"              /*This lets you name each cell in the grid to put items inside of via name instead of column/row lines, */
+        "advert content content"
+        "footer footer footer"
+}

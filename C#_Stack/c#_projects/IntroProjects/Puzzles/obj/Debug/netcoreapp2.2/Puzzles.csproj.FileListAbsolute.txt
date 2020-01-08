@@ -1,0 +1,11 @@
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/obj/Debug/netcoreapp2.2/Puzzles.csprojAssemblyReference.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/obj/Debug/netcoreapp2.2/Puzzles.csproj.CoreCompileInputs.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/obj/Debug/netcoreapp2.2/Puzzles.AssemblyInfoInputs.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/obj/Debug/netcoreapp2.2/Puzzles.AssemblyInfo.cs
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/bin/Debug/netcoreapp2.2/Puzzles.deps.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/bin/Debug/netcoreapp2.2/Puzzles.runtimeconfig.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/bin/Debug/netcoreapp2.2/Puzzles.runtimeconfig.dev.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/bin/Debug/netcoreapp2.2/Puzzles.dll
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/bin/Debug/netcoreapp2.2/Puzzles.pdb
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/obj/Debug/netcoreapp2.2/Puzzles.dll
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Puzzles/obj/Debug/netcoreapp2.2/Puzzles.pdb

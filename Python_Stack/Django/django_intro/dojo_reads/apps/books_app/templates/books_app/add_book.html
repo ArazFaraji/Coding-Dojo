@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="">
+        <a href="">Home</a>
+        <a href="">Logout</a>
+    </div>
+    <div>
+        <p>Add a New Book Title and a Review</p>
+        <form action="add_book" method="post">
+            <p><label for="book_title">Book Title</label>
+            <input type="text" name="title" id="book_title"></p>
+
+            <label for="add_author">Author</label>
+            <p>Choose from the list:
+                <select name="author" id="">
+                    % for author in authors %
+                    <option value="(Author.id)">(Author.name)</option>
+                    % endfor %
+                </select>>
+            </p>
+            <p>Or add a new author: <input type="text" name="add_author" id="add_author"></p>
+            <input type="hidden" name="">
+
+            <label for="review_text">Review</label>
+            <textarea name="review" id="review_text" cols="30" rows="10"></textarea>
+
+            <label for="rating">Rating:</label>
+            <select name="rating" id="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <input type="submit" value="Add Book and Review">
+
+        </form>
+    </div>
+    
+</body>
+</html>

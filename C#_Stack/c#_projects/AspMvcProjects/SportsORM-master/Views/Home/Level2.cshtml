@@ -1,0 +1,121 @@
+@{
+    ViewData["Title"] = "Level 2";
+}
+
+<div class="well">
+    <p>Using the SportsORM, complete all the following queries and show their results on Level2.cshtml.</p>
+    <ol>
+        <li>...all teams in the Atlantic Soccer Conference</li>
+        <li>...all (current) players on the Boston Penguins</li>
+        <li>...all (current) players in the International Collegiate Baseball Conference</li>
+        <li>...all (current) players in the American Conference of Amateur Football with last name "Lopez"</li>
+        <li>...all football players</li>
+        <li>...all teams with a (current) player named "Sophia"</li>
+        <li>...all leagues with a (current) player named "Sophia"</li>
+        <li>...everyone with the last name "Flores" who DOESN'T (currently) play for the Washington Roughriders</li>
+        <li>...all teams, past and present, that Samuel Evans has played with</li>
+        <li>...all players, past and present, with the Manitoba Tiger-Cats</li>
+        <li>...all players who were formerly (but aren't currently) with the Wichita Vikings</li>
+        <li>...every team that Jacob Gray played for before he joined the Oregon Colts</li>
+        <li>...everyone named "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players</li>
+        <li>...all teams that have had 12 or more players, past and present. (HINT: Look up the Django annotate function.)</li>
+        <li>...all players and count of teams played for, sorted by the number of teams they've played for</li>
+    </ol>
+</div>
+<div class="col-sm-6">
+        <h3>Atlantic Conference</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            @foreach(var l in ViewBag.ASC)
+            {
+                <tr>
+                    <td>@l.TeamName</td>
+                    <td>@l.Location</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <h3>Boston Penguins</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            @foreach(var l in ViewBag.Penguins)
+            {
+                <tr>
+                    <td>@l.FirstName</td>
+                    <td>@l.LastName</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <h3>ICBC</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            @foreach(var l in ViewBag.ICBC)
+            {
+                <tr>
+                    <td>@l.FirstName</td>
+                    <td>@l.LastName</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <h3>AMAF w/o Lopez</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            @foreach(var l in ViewBag.AMAF)
+            {
+                <tr>
+                    <td>@l.FirstName</td>
+                    <td>@l.LastName</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <h3>All Football Players</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            @foreach(var l in ViewBag.Football)
+            {
+                <tr>
+                    <td>@l.FirstName</td>
+                    <td>@l.LastName</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <h3>Sophia</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>First Name</th>
+                <th>Team Name</th>
+            </tr>
+            @foreach(var l in ViewBag.Sophia)
+            {
+                <tr>
+                    <td>@l.FirstName</td>
+                    <td>@l.CurrentTeam.TeamName</td>
+                </tr>
+            }
+        </table>
+    </div>
+    

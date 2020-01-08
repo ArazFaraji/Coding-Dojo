@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Ninja Gold</title>
+</head>
+<body>
+
+    <div id="container">
+        <p>Your Gold:  <input type="number" name="yourGold" value="{{session['gold']}}"></p>
+
+        <div class="money_maker">
+            <h2>Farm</h2>
+            <p>(earn 10-20 gold)</p>
+            <form action="/process_money" method="post">
+                <input type="hidden" name="which_form" value="farm">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+            
+        </div>
+
+        <div class="money_maker">
+            <h2>Cave</h2>
+            <p>(earn 5-10 gold)</p>
+            <form action="/process_money" method="post">
+                <input type="hidden" name="which_form" value="farm">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+        </div>
+
+        <div class="money_maker">
+            <h2>House</h2>
+            <p>(earn 2-5 gold)</p>
+            <form action="/process_money" method="post">
+                <input type="hidden" name="which_form" value="farm">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+        </div>
+
+        <div class="money_maker">
+            <h2>Casino</h2>
+            <p>(earn/take 0-50 gold)</p>
+            <form action="/process_money" method="post">
+                <input type="hidden" name="which_form" value="casino">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+        </div>
+
+        <p>Activities:</p>
+
+        <div id="activities">
+                
+        </div>
+
+    </div>
+    
+</body>
+</html>

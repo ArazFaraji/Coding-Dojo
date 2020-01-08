@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<a href="NewChef">Add a Chef</a>
+
+<h1>Check out our roster of Chefs!</h1>
+
+<div class="col-sm-6">
+    <h3>Boston Penguins</h3>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th># of Dishes</th>
+        </tr>
+        @foreach(var l in ViewBag.AllChefs)
+        {
+            <tr>
+                <td>@l.FirstName @l.LastName </td>
+                <td>@l.Birthday</td>
+                <td>@l.AllDishes.Count</td>
+            </tr>
+        }
+    </table>
+</div>

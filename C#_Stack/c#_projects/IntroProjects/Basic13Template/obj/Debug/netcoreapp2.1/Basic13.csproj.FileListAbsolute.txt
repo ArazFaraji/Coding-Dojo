@@ -1,0 +1,11 @@
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/bin/Debug/netcoreapp2.1/Basic13.deps.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/bin/Debug/netcoreapp2.1/Basic13.runtimeconfig.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/bin/Debug/netcoreapp2.1/Basic13.runtimeconfig.dev.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/bin/Debug/netcoreapp2.1/Basic13.dll
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/bin/Debug/netcoreapp2.1/Basic13.pdb
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/obj/Debug/netcoreapp2.1/Basic13.csprojAssemblyReference.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/obj/Debug/netcoreapp2.1/Basic13.csproj.CoreCompileInputs.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/obj/Debug/netcoreapp2.1/Basic13.AssemblyInfoInputs.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/obj/Debug/netcoreapp2.1/Basic13.AssemblyInfo.cs
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/obj/Debug/netcoreapp2.1/Basic13.dll
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Basic13Template/obj/Debug/netcoreapp2.1/Basic13.pdb

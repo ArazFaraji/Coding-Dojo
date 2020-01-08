@@ -1,0 +1,17 @@
+#container{
+    width: 100%;
+    height: 100%;
+}
+.quest{
+    width: 24%;
+    padding-bottom: 15px;
+    display: inline-block;
+    background-color: aqua;
+}
+#activities{
+    height: 200px;
+    overflow: scroll;
+}
+li{
+    line-height: 20px;
+}

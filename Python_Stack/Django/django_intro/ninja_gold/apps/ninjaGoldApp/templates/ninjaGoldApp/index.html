@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ninjaGoldApp/css/style.css' %}">  
+</head>
+<body>
+
+    <p>Your Gold:  <input type="number" name="yourGold" value="{{request.session.gold}}"><a href="clear_session"><button>Restart</button></a></p>
+
+    <div id="container">
+        <div class="quest">
+            <h2>Farm</h2>
+            <p>(earn 10-20 gold)</p>
+            <form action="process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="which_form" value="farm">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+        </div>
+        <div class="quest">
+            <h2>Cave</h2>
+            <p>(earn 5-10 gold)</p>
+            <form action="process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="which_form" value="cave">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+        </div>
+        <div class="quest">
+            <h2>House</h2>
+            <p>(earn 2-5 gold)</p>
+            <form action="process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="which_form" value="house">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+        </div>
+        <div class="quest">
+            <h2>Casino</h2>
+            <p>(earn/take 0-50 gold)</p>
+            <form action="process_money" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="which_form" value="casino">
+                <a href=""><button>Find Gold!</button></a>
+            </form>
+        </div>
+        <div id="activities">
+            <p>Activities:</p>
+            <ul>
+                {% for x in request.session.activity_list reversed %}
+                    {% if "Earned" in x %}
+                    <li style="color: green;">{{x}}</li>
+                    {% endif %}
+                    {% if "Lost" in x %}
+                    <li style="color: red;">{{x}}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/obj/Debug/netcoreapp2.2/Human.csprojAssemblyReference.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/obj/Debug/netcoreapp2.2/Human.csproj.CoreCompileInputs.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/obj/Debug/netcoreapp2.2/Human.AssemblyInfoInputs.cache
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/obj/Debug/netcoreapp2.2/Human.AssemblyInfo.cs
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/bin/Debug/netcoreapp2.2/Human.deps.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/bin/Debug/netcoreapp2.2/Human.runtimeconfig.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/bin/Debug/netcoreapp2.2/Human.runtimeconfig.dev.json
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/bin/Debug/netcoreapp2.2/Human.dll
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/bin/Debug/netcoreapp2.2/Human.pdb
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/obj/Debug/netcoreapp2.2/Human.dll
+/Users/araz/Documents/codingDojo/C#_Stack/c#_projects/Human/obj/Debug/netcoreapp2.2/Human.pdb

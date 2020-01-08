@@ -1,0 +1,29 @@
+#wrapper
+{
+    width: 1fr;
+    min-height: 40%;
+    background: lightgray;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 50px 50px 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "header"
+    "middle"
+    "project_list"
+}
+#header
+{
+    grid-area: header;
+}
+#middle
+{
+    grid-area: middle;
+}
+#project_list
+{
+    grid-area: project_list;
+    overflow: scroll;
+}
