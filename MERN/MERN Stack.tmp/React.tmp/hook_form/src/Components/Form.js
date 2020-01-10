@@ -52,7 +52,7 @@ const RegisterForm = props => {
                     <div className="form-group">
                         <label>Password</label>
                         <input type="password" className ="form-control" name="password" onChange={onChangeHandler}/>
-                        {formState.firstName.length < 8 && formState.firstName.length !==0 ? <p className="text-danger">First Name must be at least 8 characters.</p>:<p></p>}
+                        {formState.firstName.length < 7 && formState.firstName.length !==0 ? <p className="text-danger">First Name must be at least 8 characters.</p>:<p></p>}
                     </div>
 
                     <div className="form-group">
