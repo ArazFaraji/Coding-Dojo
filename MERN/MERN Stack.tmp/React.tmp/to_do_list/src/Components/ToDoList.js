@@ -47,7 +47,7 @@ const ToDoList = props => {
                     {
                         props.tasks.map( (task, index) => 
                             <li key={index}>
-                                {task.task} <input type="checkbox" />
+                                {task.task} <input type="checkbox" onClick={ e => } />
                             </li>)
                     }
                 </ul>
